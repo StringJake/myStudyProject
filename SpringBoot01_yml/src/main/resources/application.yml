@@ -1,3 +1,17 @@
 server:
   port:
     8089
+
+
+person:
+  last-name: zhansan
+  age: 18
+  boss: true
+  birth: 2020/08/23
+  maps: {key1: value1,key2: value2}
+  lists:
+    - zhangsan
+    - lisi
+  dog:
+    name: 拉布拉多
+    age: 3
