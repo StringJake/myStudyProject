@@ -1,20 +1,35 @@
 package com.example.demo.bean;
 
+import org.hibernate.validator.constraints.Email;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 @Component
-@ConfigurationProperties(prefix = "person")
+//@ConfigurationProperties(prefix = "person")  //支持松散绑定  lastName  =  last_Name = last-Name  不支持spel语言
+//@Validated   // ConfigurationProperties支持格式校验  JSP303数据校验
 public class Person {
+
+    /**
+     * <bean class="Person">
+     *      <property name="lastName" value="字面量/${key}从环境变量、配置文件中获取值/#｛SpEL"｝></property>
+     * <bean/>
+     */
+//    @Value("${person.last-name}")  //取配置文件中的值
+//    @Email
     private String lastName;
+//    @Value("#{11*2}")  //可以计算得到结果值
     private Integer age;
+//    @Value("true")      //直接赋值
     private Boolean boss;
     private Date birth;
 
+//    @Value("${person.maps}")   //不支持复杂类型数据。会报错
     private Map<String,Object> maps;
     private List<Object> lists;
 
