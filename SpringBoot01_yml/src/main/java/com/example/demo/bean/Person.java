@@ -3,6 +3,7 @@ package com.example.demo.bean;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
@@ -10,8 +11,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+
 @Component
-//@ConfigurationProperties(prefix = "person")  //支持松散绑定  lastName  =  last_Name = last-Name  不支持spel语言
+@ConfigurationProperties(prefix = "person")  //支持松散绑定  lastName  =  last_Name = last-Name  不支持spel语言
+//@PropertySource(value = {"classpath:person.properties"})
 //@Validated   // ConfigurationProperties支持格式校验  JSP303数据校验
 public class Person {
 

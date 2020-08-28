@@ -4,16 +4,16 @@ server:
 
 #1如果专门编写了一个javaBean来和配置文件进行映射。可以使用@ConfigurationProperties
 #2如果只是某一个业务类中需要获取一个配置文件中的某个值。使用@Value
-person:
-  last-name: zhangsan
-#  last-name: 1045@qq.com
-  age: 18
-  boss: true
-  birth: 2020/08/23
-  maps: {key1: value1,key2: value2}
-  lists:
-    - zhangsan
-    - lisi
-  dog:
-    name: 拉布拉多
-    age: 3
+#person:
+#  last-name: zhangsan
+##  last-name: 1045@qq.com
+#  age: 18
+#  boss: true
+#  birth: 2020/08/23
+#  maps: {key1: value1,key2: value2}
+#  lists:
+#    - zhangsan
+#    - lisi
+#  dog:
+#    name: 拉布拉多
+#    age: 3
